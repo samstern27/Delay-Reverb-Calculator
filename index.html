@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delay & Reverb Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div class="half">
+        <h1 id="delay-title">DELAY</h1>
+        <div id="timing-styles">
+          <p>notes</p>
+          <p>dotted</p>
+          <p>triplet</p>
+        </div>
+        <div>
+          <div id="timing-header">
+            <p>1/1</p>
+            <p>1/2</p>
+            <p>1/4</p>
+            <p>1/8</p>
+            <p>1/16</p>
+            <p>1/32</p>
+            <p>1/64</p>
+            <p>1/128</p>
+            <p>1/256</p>
+            <p>1/512</p>
+          </div>
+          <div class="timing-box">
+            <table class="delay-table">
+              <tr id="notes-row">
+                <td id="notes-1-1"></td>
+                <td id="notes-1-2"></td>
+                <td id="notes-1-4"></td>
+                <td id="notes-1-8"></td>
+                <td id="notes-1-16"></td>
+                <td id="notes-1-32"></td>
+                <td id="notes-1-64"></td>
+                <td id="notes-1-128"></td>
+                <td id="notes-1-256"></td>
+                <td id="notes-1-512"></td>
+              </tr>
+              <tr id="dotted-row">
+                <td id="dotted-1-1"></td>
+                <td id="dotted-1-2"></td>
+                <td id="dotted-1-4"></td>
+                <td id="dotted-1-8"></td>
+                <td id="dotted-1-16"></td>
+                <td id="dotted-1-32"></td>
+                <td id="dotted-1-64"></td>
+                <td id="dotted-1-128"></td>
+                <td id="dotted-1-256"></td>
+                <td id="dotted-1-512"></td>
+              </tr>
+              <tr id="triplet-row">
+                <td id="triplet-1-1"></td>
+                <td id="triplet-1-2"></td>
+                <td id="triplet-1-4"></td>
+                <td id="triplet-1-8"></td>
+                <td id="triplet-1-16"></td>
+                <td id="triplet-1-32"></td>
+                <td id="triplet-1-64"></td>
+                <td id="triplet-1-128"></td>
+                <td id="triplet-1-256"></td>
+                <td id="triplet-1-512"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="bpm-section">
+        <h2 id="bpm-title">select bpm:</h2>
+        <input type="number" id="bpm-input" min="1" max="999" autofocus />
+      </div>
+      <div class="half">
+        <h1 id="verb-title">REVERB</h1>
+        <div id="verb-styles">
+          <p>pre-delay</p>
+          <p>decay</p>
+          <p>total time</p>
+        </div>
+        <div>
+          <div id="verb-header">
+            <p>ambience 1/4</p>
+            <p>small room 1/2</p>
+            <p>large room 1 bar</p>
+            <p>hall 2 bars</p>
+          </div>
+          <div class="timing-box">
+            <table class="verb-table">
+              <tr id="pre-delay-row">
+                <td id="pre-delay-1-4"></td>
+                <td id="pre-delay-1-2"></td>
+                <td id="pre-delay-1-1"></td>
+                <td id="pre-delay-1-0.5"></td>
+              </tr>
+              <tr id="decay-row">
+                <td id="decay-1-4"></td>
+                <td id="decay-1-2"></td>
+                <td id="decay-1-1"></td>
+                <td id="decay-1-0.5"></td>
+              </tr>
+              <tr id="total-time-row">
+                <td id="total-time-1-4"></td>
+                <td id="total-time-1-2"></td>
+                <td id="total-time-1-1"></td>
+                <td id="total-time-1-0.5"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <footer>&copy; Samuel Stern 2024</footer>
+      </div>
+    </div>
+  </body>
+</html>

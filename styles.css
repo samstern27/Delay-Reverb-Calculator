@@ -1,0 +1,343 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Albert Sans", sans-serif;
+}
+
+body {
+  background: #2b5876; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2b5876,
+    #4e4376
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2b5876,
+    #4e4376
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+#container {
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100vh;
+}
+
+.half {
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 45%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 1vw;
+}
+
+#bpm-section {
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  color: #f3e1dd;
+  font-size: 2em;
+  font-weight: bolder;
+  padding-right: 10vw;
+}
+
+#bpm-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 13%;
+  height: 7vh;
+  border-radius: 30px;
+  font-size: 3vh;
+}
+
+#bpm-input {
+  font-family: "Albert Sans", sans-serif;
+  background-color: transparent;
+  font-size: 3vh;
+  font-weight: 500;
+  width: 10%;
+  height: 7vh;
+  color: white;
+  border: none;
+  text-align: left;
+  outline: none;
+}
+
+#bpm-input::-webkit-outer-spin-button,
+#bpm-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#bpm-input:focus {
+  border: none;
+  outline: none;
+}
+
+#delay-title {
+  margin-left: 5vw;
+  margin-top: 13vh;
+  color: #f5c6c6;
+  font-size: 5vw;
+  font-weight: 200;
+  text-shadow: 0px 0px 40px whitesmoke;
+}
+
+#verb-title {
+  margin-top: 13vh;
+  margin-left: 3vw;
+  color: #f5c6c6;
+  font-size: 5vw;
+  font-weight: 200;
+  text-shadow: 0px 0px 40px whitesmoke;
+}
+
+.timing-box {
+  margin-right: 2.3vw;
+  width: 60vw;
+  height: 30vh;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.delay-table {
+  width: 60vw;
+  height: 30vh;
+  border-collapse: collapse;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+  color: #f3e1dd;
+  font-size: 1.25rem;
+  font-weight: bolder;
+}
+
+.delay-table tr {
+  width: 54vw;
+  height: 6vh;
+  margin: 1vh 0;
+  padding: 1vh 2vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+.delay-table tr td {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6vw;
+  height: 6vh;
+  white-space: pre-line;
+  overflow: hidden;
+  text-shadow: 0px 0px 10px black;
+  font-size: 1vw;
+}
+
+#timing-header {
+  border-radius: 15px;
+  box-sizing: border-box;
+  padding: 1vh 3.5vw;
+  width: 60vw;
+  height: 6vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  margin-bottom: 2.5vh;
+}
+
+#timing-header p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4vw;
+  height: 6vh;
+  margin: 0;
+  padding: 0;
+  font-size: 1vw;
+  font-weight: bolder;
+  color: #f3e1dd;
+  overflow: hidden;
+}
+
+#timing-styles {
+  border-radius: 15px;
+  margin-top: 8.6vh;
+  margin-left: 3.5vw;
+  margin-right: 0vw;
+  width: 10vw;
+  box-sizing: border-box;
+  height: 29.9vh;
+  font-size: 1vw;
+  font-weight: bolder;
+  color: #f3e1dd;
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 5vh 1vw;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#timing-styles p {
+  margin: 0;
+  padding: 0;
+  font-size: 1vw;
+  font-weight: bolder;
+  color: #f3e1dd;
+}
+
+#verb-header {
+  border-radius: 15px;
+  box-sizing: border-box;
+  padding: 1vh 3vw;
+  width: 60vw;
+  height: 6vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  margin-bottom: 2.5vh;
+}
+
+#verb-header p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10vw;
+  height: 6vh;
+  margin: 0;
+  padding: 0;
+  font-size: 1vw;
+  font-weight: bolder;
+  color: #f3e1dd;
+  overflow: hidden;
+}
+
+#verb-styles {
+  border-radius: 15px;
+  margin-top: 8.6vh;
+  margin-left: 4.5vw;
+  margin-right: 1.6vw;
+  width: 19vw;
+  box-sizing: border-box;
+  height: 29.9vh;
+  font-size: 1vw;
+  font-weight: bolder;
+  color: #f3e1dd;
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 5vh 1vw;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#verb-styles p {
+  margin: 0;
+  padding: 0;
+  font-size: 1vw;
+  font-weight: bolder;
+  color: #f3e1dd;
+}
+
+.verb-table {
+  width: 60vw;
+  height: 30vh;
+  border-collapse: collapse;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+  color: #f3e1dd;
+  font-size: 1.25rem;
+  font-weight: bolder;
+}
+
+.verb-table tr {
+  width: 54vw;
+  height: 6vh;
+  margin: 1vh 0;
+  padding: 1vh 2vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+.verb-table tr td {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6vw;
+  height: 6vh;
+  white-space: pre-line;
+  overflow: hidden;
+  text-shadow: 0px 0px 10px black;
+  font-size: 1vw;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  color: #f3e1dd;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 1vw;
+  text-align: center;
+}
